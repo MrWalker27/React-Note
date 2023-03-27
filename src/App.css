@@ -5,6 +5,118 @@
 }
 
 /* GLOBAL STYLES */
+@media only screen and (min-width:900px) {
+  .title1 {
+    display: block;
+  }
+  .title2 {
+    display: none;
+  }
+  .app-sidebar-notes {
+    height: calc(100vh - 78px);
+    overflow-y: scroll;
+  }
+}
+
+@media only screen and (max-width:900px) and (min-width: 500px) {
+  .app-sidebar {
+    width: 30%;
+    height: 100vh;
+    border-bottom: 1px solid #ddd;
+    min-width: 210px;
+  }
+  .title1 {
+    display: none;
+  }
+  .title2 {
+    display: block;
+  }  
+  .app-sidebar-notes {
+    height: calc(100vh - 78px);
+    overflow-y: scroll;
+  }
+}
+
+@media only screen and (max-width:500px) and (min-width: 260px){
+  .title1 {
+    display: block !important;
+  }
+  .title2 {
+    display: none !important;
+  }
+  .App {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  #sidebar_body{
+    display: none;
+  }
+  .app-sidebar {
+    min-width: 100%;
+    max-height: 225px;
+    border-bottom: 1px solid black;
+  }
+  .title1 {
+    display: none;
+  }
+  .title2 {
+    display: block;
+  }
+  .app-sidebar-notes {
+    max-height: 138px;
+    min-width: 100%;
+    overflow-y: scroll;
+  }
+  .app-main {
+    min-width: 100%;
+  }
+  .no-active-note{
+    width: 100% !important;
+    text-align: center;
+  }
+}
+@media only screen and (max-width:260px) {
+  .title1 {
+    display: none !important;
+  }
+  .title2 {
+    display: block !important;
+  }
+  .App {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  #sidebar_body{
+    display: none;
+  }
+  .app-sidebar {
+    min-width: 234px !important;
+    width: 100% !important;
+    max-height: 225px;
+    border-bottom: 1px solid black;
+  }
+  .title1 {
+    display: none;
+  }
+  .title2 {
+    display: block;
+  }
+  .app-sidebar-notes {
+    max-height: 138px;
+    overflow-y: scroll;
+  }
+  .app-main {
+    width: 100% !important;
+    min-width: 234px !important;
+  }
+  .no-active-note{
+    width: 100% !important;
+    min-width: 234px !important;
+    text-align: center;
+  }
+}
 
 body,
 .App {
@@ -52,10 +164,7 @@ button:hover {
   margin: 0;
 }
 
-.app-sidebar-notes {
-  height: calc(100vh - 78px);
-  overflow-y: scroll;
-}
+
 .app-sidebar-note {
   padding: 25px;
   cursor: pointer;
@@ -92,7 +201,6 @@ button:hover {
 }
 .app-main-note-edit {
   height: 90vh;
-  /* background-color: #04c; */
 }
 
 .no-active-note {
@@ -115,7 +223,7 @@ textarea {
   border: 1px solid #ddd;
   margin-bottom: 20px;
   width: 100%;
-  height: calc(90vh - 130px);
+  height: calc(90vh - 80px);
   padding: 10px;
   resize: none;
   font-size: inherit;
